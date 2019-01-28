@@ -266,7 +266,7 @@ def numbers_constant_forward(r, maxnum, n):
                     print(j + 1)
                 else:
                     print(j + 1, end='')
-            if (j is not maxnum - 1):
+            if j is not maxnum - 1:
                 print(' ', end='')
 
 
@@ -304,7 +304,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -312,7 +312,15 @@ def numbers_constant_backwards(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(r):
+        for j in range(maxnum):
+            for l in range(n):
+                if (j is maxnum - 1) and (l is n - 1):
+                    print(maxnum - j)
+                else:
+                    print(maxnum - j, end='')
+            if j is not maxnum - 1:
+                print(' ', end='')
 
 
 def run_test_numbers_increasing_forward():
@@ -357,7 +365,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -365,6 +373,16 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r):
+        for j in range(maxnum):
+            for l in range(j + 1):
+                if (j is maxnum - 1) and (l is j):
+                    print(j + 1)
+                else:
+                    print(j + 1, end='')
+            if j is not maxnum - 1:
+                print(' ', end='')
+
 
 
 # -----------------------------------------------------------------------------
